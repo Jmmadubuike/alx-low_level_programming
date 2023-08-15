@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * main - print _putchar
+ * is written by jtmmadubuike
+ * Return: 0
+*/
 
 int main(void)
 {
