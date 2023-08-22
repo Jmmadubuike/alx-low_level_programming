@@ -8,7 +8,7 @@
  *
  * Return: dest
  */
-char *_strncat(char *dest, char *src, int n)
+void swap_int(int *a, int *b);
 {
 	int i;
 	int j;
