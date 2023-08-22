@@ -2,7 +2,16 @@
 #include <stdio.h>
 
 /**
- * main - check the code 
+ * reset_to_98 - Updates the value of the integer to 98.
+ * @n: A pointer to an integer.
+ */
+void reset_to_98(int *n)
+{
+    *n = 98;
+}
+
+/**
+ * main - Entry point of the program.
  *
  * Return: Always 0.
  */
