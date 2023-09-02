@@ -1,29 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctype.h>
 /**
  * main - Entry point of the program
  * @argc: The number of command-line arguments
  * @argv: An array containing the command-line arguments
  *
- * Return: 0 if successful, 1 if the program doesn't receive two arguments
+ * Return: 0 if successful, 1 if there's an error
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, result;
+	int sum = 0;
+	int i; /* Move the variable declaration here */
 
-	if (argc != 3)
+	if (argc < 2)
 	{
-		printf("Error\n");
-		return (1);
+	printf("0\n");
+	return (0);
 	}
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
+	for (i = 1; i < argc; i++) /* Use the variable 'i' here */
+	{
+	char *arg = argv[i];
+	int j = 0;
 
-	result = num1 + num2;
+	while (arg[j] != '\0')
+	{
+		if (!isdigit(arg[j]))
+		{
+		printf("Error\n");
+		return (1);
+		}
+		j++;
+	}
 
-	printf("%d\n", result);
+	sum += atoi(arg);
+	}
+
+	printf("%d\n", sum);
 
 	return (0);
 }
